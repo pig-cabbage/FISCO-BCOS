@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class org.fisco.bcos.ContractTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class org.fisco.bcos.ContractTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/org.fisco.bcos.html">org.fisco.bcos</a> &gt; ContractTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">1.901s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">deployAndCallHelloWorld</td>
+<td class="success">1.901s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>00:16:17,582 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Could NOT find resource [logback-test.xml]
+00:16:17,583 |-INFO in ch.qos.logback.classic.LoggerContext[default] - Found resource [logback.groovy] at [file:/C:/Users/pig-cabbage/Documents/大三作业与实验/大三下/FISCO-BCOS/spring-boot-starter/build/resources/main/logback.groovy]
+00:16:19,900 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@18b7e7f6 - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+00:16:19,904 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@18b7e7f6 - Naming appender as [CONSOLE]
+00:16:20,263 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@18b7e7f6 - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+00:16:20,264 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@18b7e7f6 - Naming appender as [FILE_INFO]
+00:16:20,352 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1004822595 - No compression will be used
+00:16:20,353 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@1004822595 - Will use the pattern logs/spring-boot-starter/info.created_on_%d{yyyy-MM-dd}.part_%i.log for the active file
+00:16:20,357 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@129baf91 - The date pattern is 'yyyy-MM-dd' from file name pattern 'logs/spring-boot-starter/info.created_on_%d{yyyy-MM-dd}.part_%i.log'.
+00:16:20,357 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@129baf91 - Roll-over at midnight.
+00:16:20,364 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@129baf91 - Setting initial period to Wed Jun 17 00:16:20 CST 2020
+00:16:20,366 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@129baf91 - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+00:16:20,366 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@129baf91 - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+00:16:20,376 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE_INFO] - Active log file name: logs/spring-boot-starter/info.created_on_2020-06-17.part_0.log
+00:16:20,376 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE_INFO] - File property is set to [null]
+00:16:20,379 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@18b7e7f6 - About to instantiate appender of type [ch.qos.logback.core.rolling.RollingFileAppender]
+00:16:20,379 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@18b7e7f6 - Naming appender as [FILE_ERROR]
+00:16:20,393 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@2000171950 - No compression will be used
+00:16:20,394 |-INFO in c.q.l.core.rolling.TimeBasedRollingPolicy@2000171950 - Will use the pattern logs/spring-boot-starter/error.created_on_%d{yyyy-MM-dd}.part_%i.log for the active file
+00:16:20,395 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@5097f2e8 - The date pattern is 'yyyy-MM-dd' from file name pattern 'logs/spring-boot-starter/error.created_on_%d{yyyy-MM-dd}.part_%i.log'.
+00:16:20,395 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@5097f2e8 - Roll-over at midnight.
+00:16:20,397 |-INFO in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@5097f2e8 - Setting initial period to Wed Jun 17 00:16:20 CST 2020
+00:16:20,397 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@5097f2e8 - SizeAndTimeBasedFNATP is deprecated. Use SizeAndTimeBasedRollingPolicy instead
+00:16:20,397 |-WARN in ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP@5097f2e8 - For more information see http://logback.qos.ch/manual/appenders.html#SizeAndTimeBasedRollingPolicy
+00:16:20,402 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE_ERROR] - Active log file name: logs/spring-boot-starter/error.created_on_2020-06-17.part_0.log
+00:16:20,402 |-INFO in ch.qos.logback.core.rolling.RollingFileAppender[FILE_ERROR] - File property is set to [null]
+00:16:20,414 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@18b7e7f6 - Setting level of logger [ROOT] to INFO
+00:16:20,431 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@18b7e7f6 - Attaching appender named [CONSOLE] to Logger[ROOT]
+00:16:20,432 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@18b7e7f6 - Attaching appender named [FILE_INFO] to Logger[ROOT]
+00:16:20,432 |-INFO in ch.qos.logback.classic.gaffer.ConfigurationDelegate@18b7e7f6 - Attaching appender named [FILE_ERROR] to Logger[ROOT]
+
+2020-06-17 00:16:20,748 [Test worker] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] AbstractTestContextBootstrapper.java:308 - Neither @ContextConfiguration nor @ContextHierarchy found for test class [org.fisco.bcos.ContractTest], using SpringBootContextLoader
+2020-06-17 00:16:20,759 [Test worker] INFO  [o.s.test.context.support.AbstractContextLoader] AbstractContextLoader.java:264 - Could not detect default resource locations for test class [org.fisco.bcos.ContractTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-06-17 00:16:21,076 [Test worker] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] AbstractTestContextBootstrapper.java:248 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2020-06-17 00:16:21,110 [Test worker] INFO  [o.s.b.t.context.SpringBootTestContextBootstrapper] AbstractTestContextBootstrapper.java:177 - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3a07f6d7, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5b8caf87, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@c12b4c9, org.springframework.test.context.support.DirtiesContextTestExecutionListener@65bc5a3c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6088b912, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5e46d213, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@476b91ee, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@40015e85, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@65642fbe, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@ddaaf4b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@16a5bbff]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.1.4.RELEASE)
+
+2020-06-17 00:16:23,029 [Test worker] INFO  [org.fisco.bcos.ContractTest] StartupInfoLogger.java:50 - Starting ContractTest on DESKTOP-RI4L4M0 with PID 15476 (started by pig-cabbage in C:\Users\pig-cabbage\Documents\澶т笁浣滀笟涓庡疄楠孿澶т笁涓媆FISCO-BCOS\spring-boot-starter)
+2020-06-17 00:16:23,031 [Test worker] INFO  [org.fisco.bcos.ContractTest] SpringApplication.java:675 - No active profile set, falling back to default profiles: default
+2020-06-17 00:16:27,112 [Test worker] INFO  [org.fisco.bcos.autoconfigure.AccountConfig] AccountConfig.java:62 - pem accounts : 0xcdcce60801c0a2e6bb534322c32ae528b9dec8d2.pem
+0xcdcce60801c0a2e6bb534322c32ae528b9dec8d2
+2020-06-17 00:16:28,215 [Test worker] INFO  [org.fisco.bcos.autoconfigure.ServiceConfig] ServiceConfig.java:25 - agencyName : fisco
+2020-06-17 00:16:28,577 [Test worker] INFO  [org.fisco.bcos.channel.client.Service] Service.java:296 - set jdk.tls.namedGroups opt, value : secp256k1
+2020-06-17 00:16:28,598 [Test worker] INFO  [org.fisco.bcos.channel.handler.ChannelConnections] ChannelConnections.java:450 -  all connections: [ConnectionInfo{host='129.204.20.87', port=20200}, ConnectionInfo{host='129.204.20.87', port=20201}]
+2020-06-17 00:16:31,725 [nioEventLoopGroup-2-2] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:45 -  handshake success, host: 129.204.20.87, port: 20201, ctx: 544393679
+2020-06-17 00:16:31,725 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:45 -  handshake success, host: 129.204.20.87, port: 20200, ctx: 1596306933
+2020-06-17 00:16:31,731 [nioEventLoopGroup-2-2] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:91 -  connect 129.204.20.87:20201 success, ctx: 544393679
+2020-06-17 00:16:31,731 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:91 -  connect 129.204.20.87:20200 success, ctx: 1596306933
+2020-06-17 00:16:31,904 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:207 -  query node version host: 129.204.20.87:20200, seq: b852d8e8e0104f36af4413dd725b2b89, content: {&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;getClientVersion&quot;,&quot;params&quot;:[],&quot;id&quot;:1}
+2020-06-17 00:16:31,904 [nioEventLoopGroup-2-2] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:207 -  query node version host: 129.204.20.87:20201, seq: dc7b60aa88ae4949a70763000bf035fd, content: {&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;getClientVersion&quot;,&quot;params&quot;:[],&quot;id&quot;:0}
+2020-06-17 00:16:32,267 [nioEventLoopGroup-2-2] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:258 -  node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {&quot;id&quot;:0,&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;result&quot;:{&quot;Build Time&quot;:&quot;20200430 03:22:53&quot;,&quot;Build Type&quot;:&quot;Linux/clang/Release&quot;,&quot;Chain Id&quot;:&quot;1&quot;,&quot;FISCO-BCOS Version&quot;:&quot;2.4.0&quot;,&quot;Git Branch&quot;:&quot;HEAD&quot;,&quot;Git Commit Hash&quot;:&quot;0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6&quot;,&quot;Supported Version&quot;:&quot;2.4.0&quot;}}
+
+2020-06-17 00:16:32,267 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:258 -  node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {&quot;id&quot;:1,&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;result&quot;:{&quot;Build Time&quot;:&quot;20200430 03:22:53&quot;,&quot;Build Type&quot;:&quot;Linux/clang/Release&quot;,&quot;Chain Id&quot;:&quot;1&quot;,&quot;FISCO-BCOS Version&quot;:&quot;2.4.0&quot;,&quot;Git Branch&quot;:&quot;HEAD&quot;,&quot;Git Commit Hash&quot;:&quot;0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6&quot;,&quot;Supported Version&quot;:&quot;2.4.0&quot;}}
+
+2020-06-17 00:16:32,271 [nioEventLoopGroup-2-2] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:267 -  support channel handshake node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {&quot;id&quot;:0,&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;result&quot;:{&quot;Build Time&quot;:&quot;20200430 03:22:53&quot;,&quot;Build Type&quot;:&quot;Linux/clang/Release&quot;,&quot;Chain Id&quot;:&quot;1&quot;,&quot;FISCO-BCOS Version&quot;:&quot;2.4.0&quot;,&quot;Git Branch&quot;:&quot;HEAD&quot;,&quot;Git Commit Hash&quot;:&quot;0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6&quot;,&quot;Supported Version&quot;:&quot;2.4.0&quot;}}
+
+2020-06-17 00:16:32,271 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:267 -  support channel handshake node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {&quot;id&quot;:1,&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;result&quot;:{&quot;Build Time&quot;:&quot;20200430 03:22:53&quot;,&quot;Build Type&quot;:&quot;Linux/clang/Release&quot;,&quot;Chain Id&quot;:&quot;1&quot;,&quot;FISCO-BCOS Version&quot;:&quot;2.4.0&quot;,&quot;Git Branch&quot;:&quot;HEAD&quot;,&quot;Git Commit Hash&quot;:&quot;0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6&quot;,&quot;Supported Version&quot;:&quot;2.4.0&quot;}}
+
+2020-06-17 00:16:32,305 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:167 -  channel protocol handshake success, set socket channel protocol, host: 129.204.20.87:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.4.0, EnumProtocol=VERSION_3]
+2020-06-17 00:16:32,305 [nioEventLoopGroup-2-2] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:167 -  channel protocol handshake success, set socket channel protocol, host: 129.204.20.87:20201, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.4.0, EnumProtocol=VERSION_3]
+2020-06-17 00:16:32,317 [Test worker] INFO  [org.fisco.bcos.channel.client.Service] Service.java:373 -  Connect to  nodes: [129.204.20.87:20200, 129.204.20.87:20201] ,groupId: 1 ,caCert: class path resource [ca.crt] ,sslKey: class path resource [sdk.key] ,sslCert: class path resource [sdk.crt] ,java version: 1.8.0_144 ,java vendor: Oracle Corporation
+2020-06-17 00:16:32,350 [nioEventLoopGroup-2-2] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:338 -  send update topic message request, seq: 5b283f3500954b6686b90d4078a80066, content: [&quot;_block_notify_1&quot;]
+2020-06-17 00:16:32,360 [nioEventLoopGroup-2-2] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:370 -  query block number host: 129.204.20.87:20201, seq: d38a7ca75407423082cfd3c5d8c28470, content: {&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;getBlockNumber&quot;,&quot;params&quot;:[1],&quot;id&quot;:2}
+2020-06-17 00:16:32,363 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:338 -  send update topic message request, seq: 5c7ccd444a9c44e2a0a9030f7e355ab9, content: [&quot;_block_notify_1&quot;]
+2020-06-17 00:16:32,367 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:370 -  query block number host: 129.204.20.87:20200, seq: 12178cd7bfc747b6848ddcb9926e0ab3, content: {&quot;jsonrpc&quot;:&quot;2.0&quot;,&quot;method&quot;:&quot;getBlockNumber&quot;,&quot;params&quot;:[1],&quot;id&quot;:3}
+2020-06-17 00:16:32,398 [nioEventLoopGroup-2-2] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:395 -  query blocknumer, host:129.204.20.87:20201, blockNumber: 0 
+2020-06-17 00:16:32,398 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:395 -  query blocknumer, host:129.204.20.87:20200, blockNumber: 0 
+2020-06-17 00:16:33,638 [Test worker] INFO  [org.fisco.bcos.ContractTest] StartupInfoLogger.java:59 - Started ContractTest in 12.454 seconds (JVM running for 17.71)
+2020-06-17 00:16:34,655 [Test worker] INFO  [org.fisco.bcos.web3j.utils.Async] Async.java:19 -  default set setExeutor , pool size is 50
+2020-06-17 00:16:34,657 [Test worker] INFO  [org.fisco.bcos.web3j.utils.Async] Async.java:81 -  set setExeutor because executor null, executor is java.util.concurrent.ThreadPoolExecutor@6aa2bad3[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+2020-06-17 00:16:34,887 [nioEventLoopGroup-2-2] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {&quot;blockNumber&quot;:1,&quot;groupID&quot;:1}
+
+2020-06-17 00:16:34,893 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {&quot;blockNumber&quot;:1,&quot;groupID&quot;:1}
+
+HelloWorld address is: 0xfb4bf907c9a64f7b3a0a2afd901fee46b83606ca
+2020-06-17 00:16:35,432 [nioEventLoopGroup-2-2] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {&quot;blockNumber&quot;:2,&quot;groupID&quot;:1}
+
+2020-06-17 00:16:35,433 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {&quot;blockNumber&quot;:2,&quot;groupID&quot;:1}
+
+Hello, World!
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 5.6.2</a> at 2020-6-17 0:16:47</p>
+</div>
+</div>
+</body>
+</html>
