@@ -1,0 +1,11 @@
+2020-06-22 11:33:32,470 [nioEventLoopGroup-2-1] ERROR [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:30 -  idle state event:READER_IDLE connect129.204.20.87:20200 long time Inactive，disconnect
+2020-06-22 11:33:32,470 [nioEventLoopGroup-2-2] ERROR [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:30 -  idle state event:READER_IDLE connect129.204.20.87:20201 long time Inactive，disconnect
+2020-06-22 12:00:58,852 [nioEventLoopGroup-2-1] ERROR [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:30 -  idle state event:READER_IDLE connect129.204.20.87:20200 long time Inactive，disconnect
+2020-06-22 19:13:04,599 [nioEventLoopGroup-2-3] ERROR [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:30 -  idle state event:READER_IDLE connect129.204.20.87:20200 long time Inactive，disconnect
+2020-06-22 19:13:26,020 [nioEventLoopGroup-2-4] ERROR [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:30 -  idle state event:READER_IDLE connect129.204.20.87:20200 long time Inactive，disconnect
+2020-06-22 21:34:41,170 [nioEventLoopGroup-2-5] ERROR [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:30 -  idle state event:READER_IDLE connect129.204.20.87:20200 long time Inactive，disconnect
+2020-06-22 21:34:41,170 [nioEventLoopGroup-2-2] ERROR [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:30 -  idle state event:READER_IDLE connect129.204.20.87:20201 long time Inactive，disconnect
+2020-06-22 21:35:24,097 [nioEventLoopGroup-2-7] ERROR [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:30 -  idle state event:READER_IDLE connect129.204.20.87:20201 long time Inactive，disconnect
+2020-06-22 21:35:24,097 [nioEventLoopGroup-2-6] ERROR [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:30 -  idle state event:READER_IDLE connect129.204.20.87:20200 long time Inactive，disconnect
+2020-06-22 22:05:48,557 [nioEventLoopGroup-2-9] ERROR [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:30 -  idle state event:READER_IDLE connect129.204.20.87:20201 long time Inactive，disconnect
+2020-06-22 22:05:48,557 [nioEventLoopGroup-2-8] ERROR [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:30 -  idle state event:READER_IDLE connect129.204.20.87:20200 long time Inactive，disconnect

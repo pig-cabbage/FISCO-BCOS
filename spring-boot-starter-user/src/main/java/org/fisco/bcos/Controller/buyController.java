@@ -1,8 +1,8 @@
 package org.fisco.bcos.Controller;
 
 
-import jnr.ffi.annotations.In;
-import org.fisco.bcos.Service.BuyGoodsService;
+
+import org.fisco.bcos.Service.buyGoodsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,20 +15,47 @@ import java.util.Map;
 public class buyController {
 
     @Autowired
-    private BuyGoodsService buyGoodsService;
+    private buyGoodsService buyGoodsService;
 
 
-    @RequestMapping(value = "/buy",method = RequestMethod.GET)
-    public Map<String,Object> buy(@RequestParam("userId") Integer userId,@RequestParam("goodsId") Integer goodsId,@RequestParam("num") Integer num,@RequestParam("flag") Integer flag){
+    @RequestMapping(value = "/api/buy/money",method = RequestMethod.GET)
+    public Map<String,Object> buyByMoney(@RequestParam("userId") Integer userId,@RequestParam("goodsId") Integer goodsId,@RequestParam("num") Integer num) throws Exception {
         Map<String,Object> res=new HashMap<>();
-        Integer result=buyGoodsService.buyGoods(userId,goodsId,num,flag);
+
+        Integer result=buyGoodsService.buyGoodsByMoney(userId,goodsId,num);
         if(result==1)
             res.put("response","success");
         else{
             if(result==2)
-                res.put("response","���׼�¼����ʧ�� ");
+                res.put("response","交易记录添加失败 ");
             else
-                res.put("response","��Ʒ/�û�/�̼���Ϣ����ʧ��");
+                if(result==3) {
+                    res.put("response", "商品/用户/商家信息更改失败");
+
+                }else
+                    res.put("response", "合约执行失败");
+        }
+        return res;
+
+
+
+    }
+
+    @RequestMapping(value = "/api/buy/score",method = RequestMethod.GET)
+    public Map<String,Object> buyByScore(@RequestParam("userId") Integer userId,@RequestParam("goodsId") Integer goodsId,@RequestParam("num") Integer num) throws Exception {
+        Map<String,Object> res=new HashMap<>();
+        Integer result=buyGoodsService.buyGoodsByScore(userId,goodsId,num);
+        if(result==1)
+            res.put("response","success");
+        else{
+            if(result==2)
+                res.put("response","交易记录添加失败 ");
+            else
+            if(result==3) {
+                res.put("response", "商品/用户/商家信息更改失败");
+
+            }else
+                res.put("response", "合约执行失败");
 
         }
         return res;
@@ -36,4 +63,5 @@ public class buyController {
 
 
     }
+
 }

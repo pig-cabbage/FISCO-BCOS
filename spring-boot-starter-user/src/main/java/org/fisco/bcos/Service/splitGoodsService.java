@@ -22,14 +22,14 @@ public class splitGoodsService {
         return 1 - (float) compare(str, target) / Math.max(str.length(), target.length());
     }
     public int compare(String str,String target){
-        int d[][]; // ¾ØÕó
+        int d[][]; // çŸ©é˜µ
         int n = str.length();
         int m = target.length();
-        int i; // ±éÀústrµÄ
-        int j; // ±éÀútargetµÄ
-        char ch1; // strµÄ
-        char ch2; // targetµÄ
-        int temp; // ¼ÇÂ¼ÏàÍ¬×Ö·û,ÔÚÄ³¸ö¾ØÕóÎ»ÖÃÖµµÄÔöÁ¿,²»ÊÇ0¾ÍÊÇ1
+        int i; // éå†strçš„
+        int j; // éå†targetçš„
+        char ch1; // strçš„
+        char ch2; // targetçš„
+        int temp; // è®°å½•ç›¸åŒå­—ç¬¦,åœ¨æŸä¸ªçŸ©é˜µä½ç½®å€¼çš„å¢é‡,ä¸æ˜¯0å°±æ˜¯1
         if (n == 0) {
             return m;
         }
@@ -37,17 +37,17 @@ public class splitGoodsService {
             return n;
         }
         d = new int[n + 1][m + 1];
-        for (i = 0; i <= n; i++) { // ³õÊ¼»¯µÚÒ»ÁĞ
+        for (i = 0; i <= n; i++) { // åˆå§‹åŒ–ç¬¬ä¸€åˆ—
             d[i][0] = i;
         }
 
-        for (j = 0; j <= m; j++) { // ³õÊ¼»¯µÚÒ»ĞĞ
+        for (j = 0; j <= m; j++) { // åˆå§‹åŒ–ç¬¬ä¸€è¡Œ
             d[0][j] = j;
         }
 
-        for (i = 1; i <= n; i++) { // ±éÀústr
+        for (i = 1; i <= n; i++) { // éå†str
             ch1 = str.charAt(i - 1);
-            // È¥Æ¥Åätarget
+            // å»åŒ¹é…target
             for (j = 1; j <= m; j++) {
                 ch2 = target.charAt(j - 1);
                 if (ch1 == ch2) {
@@ -56,7 +56,7 @@ public class splitGoodsService {
                     temp = 1;
                 }
 
-                // ×ó±ß+1,ÉÏ±ß+1, ×óÉÏ½Ç+tempÈ¡×îĞ¡
+                // å·¦è¾¹+1,ä¸Šè¾¹+1, å·¦ä¸Šè§’+tempå–æœ€å°
                 d[i][j] = min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + temp);
             }
         }
@@ -65,8 +65,16 @@ public class splitGoodsService {
 
     public List<Goods> splitByPrice(Integer begin,Integer end){
 
-        System.out.println(begin);
-        return goodsMapper.selectByScorePrice(begin,end);
+
+        List<Goods> result= goodsMapper.selectByScorePrice(begin,end);
+        Collections.sort(result, new Comparator<Goods>() {
+            @Override
+            public int compare(Goods o1, Goods o2) {
+                return o2.getTimeOfGrounding().compareTo(o1.getTimeOfGrounding());
+            }
+        });
+        return result;
+
     }
 
     public List<Goods> splitByName(String name){
@@ -86,6 +94,12 @@ public class splitGoodsService {
         for(Integer i=0;i<list_data.size();i++){
             result.add(list_data.get(i).getKey());
         }
+        Collections.sort(result, new Comparator<Goods>() {
+            @Override
+            public int compare(Goods o1, Goods o2) {
+                return o2.getTimeOfGrounding().compareTo(o1.getTimeOfGrounding());
+            }
+        });
         return result;
 
     }

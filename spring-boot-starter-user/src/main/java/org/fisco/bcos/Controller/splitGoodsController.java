@@ -16,10 +16,10 @@ import java.util.Map;
 public class splitGoodsController {
 
     @Autowired
-    private org.fisco.bcos.Service.splitGoodsService splitGoodsService;
+    private splitGoodsService splitGoodsService;
 
 
-    @RequestMapping("/splitbyscore")
+    @RequestMapping("/api/splitByScore")
     public Map<String,Object> splitByScorePrice(@RequestParam("begin") Integer begin,@RequestParam("end") Integer end){
         Map<String,Object>res=new HashMap<>();
         List<Goods> goodsList=splitGoodsService.splitByPrice(begin,end);
@@ -27,7 +27,7 @@ public class splitGoodsController {
         return res;
     }
 
-    @RequestMapping("/splitbyname")
+    @RequestMapping("/api/splitByName")
     public Map<String,Object> splitByName(@RequestParam("name") String name){
         Map<String,Object>res=new HashMap<>();
         List<Goods> goodsList=splitGoodsService.splitByName(name);

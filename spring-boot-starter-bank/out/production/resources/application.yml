@@ -1,4 +1,4 @@
-encrypt-type: # 0:standard, 1:guomi
+﻿encrypt-type: # 0:standard, 1:guomi
   encrypt-type: 0
 
 group-channel-connections-config:
@@ -8,18 +8,36 @@ group-channel-connections-config:
   all-channel-connections:
     - group-id: 1 #group ID
       connections-str:
-        - 192.168.0.103:20200 # node listen_ip:channel_listen_port
-        - 192.168.0.103:20201
+        - 129.204.20.87:20204 # node listen_ip:channel_listen_port
+        - 129.204.20.87:20205
     - group-id: 2
       connections-str:
-        - 192.168.0.103:20202 # node listen_ip:channel_listen_port
-        - 192.168.0.103:20203
+        - 129.204.20.87:20202 # node listen_ip:channel_listen_port
+        - 129.204.20.87:20203
 
 channel-service:
   group-id: 1 # The specified group to which the SDK connects
-  agency-name: fisco # agency name
+  agency-name: bank # agency name
 
 accounts:
-  pem-file: 0xcdcce60801c0a2e6bb534322c32ae528b9dec8d2.pem
+  pem-file: 0x7b52ba0c6f7ec03dec45d60721853ee38775da6e.pem
   p12-file: 0x98333491efac02f8ce109b0c499074d47e7779a6.p12
   password: 123456
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://129.204.20.87:3306/score_market?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: lxpkLXPK8953807@
+
+  jackson:
+    time-zone: GMT+8
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: org.fisco.bcos.model
+
+server:
+  #端口号
+  port: 8888

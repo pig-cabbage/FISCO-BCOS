@@ -16,7 +16,7 @@ public class ContractConfig {
 
     @Bean
    public Asset getAsset(){
-        Asset  asset = Asset.load("0x0dbffbd2546c31f5dcf05bce9a69e58a2600dea9", web3j,
+        Asset  asset = Asset.load("0xb2687258cb731692de18a2d9b8ba8ca585854c11", web3j,
                 credentials,
                 new StaticGasProvider(
                         GasConstants.GAS_PRICE, GasConstants.GAS_LIMIT));

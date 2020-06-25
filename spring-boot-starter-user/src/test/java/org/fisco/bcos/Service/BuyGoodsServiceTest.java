@@ -3,9 +3,7 @@ package org.fisco.bcos.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
-
-public class BuyGoodsServiceTest {
+public class buyGoodsServiceTest {
 
     @Autowired
     private BuyGoodsService buyGoodsService;

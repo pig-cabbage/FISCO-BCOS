@@ -45,7 +45,7 @@
     from goods
     where price_score <![CDATA[ >= ]]> #{begin,jdbcType=INTEGER}
     and price_score <![CDATA[ <= ]]> #{end,jdbcType=INTEGER}
-    and time_of_undergrounding <![CDATA[ != ]]> NULL
+    and NOT (time_of_undergrounding IS NOT NULL)
   </select>
 
   <select id="selectAll"  resultMap="BaseResultMap">
@@ -56,7 +56,7 @@
     select
     <include refid="Base_Column_List" />
     from goods
-    where time_of_undergrounding != NULL
+    where NOT (time_of_undergrounding IS NOT NULL)
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     <!--

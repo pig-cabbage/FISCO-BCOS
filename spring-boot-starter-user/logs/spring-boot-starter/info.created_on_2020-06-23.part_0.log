@@ -1,0 +1,201 @@
+2020-06-23 22:17:58,812 [main] INFO  [org.fisco.bcos.Application] StartupInfoLogger.java:50 - Starting Application on LAPTOP-JJ85ABA7 with PID 21172 (E:\node\spring-boot-starter-user(1)\spring-boot-starter-user\spring-boot-starter-user\build\classes\java\main started by curryan in E:\node\spring-boot-starter-user(1)\spring-boot-starter-user\spring-boot-starter-user)
+2020-06-23 22:17:58,815 [main] INFO  [org.fisco.bcos.Application] SpringApplication.java:675 - No active profile set, falling back to default profiles: default
+2020-06-23 22:18:00,878 [main] INFO  [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] PostProcessorRegistrationDelegate.java:330 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$6b15df83] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-06-23 22:18:01,291 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:90 - Tomcat initialized with port(s): 8999 (http)
+2020-06-23 22:18:01,309 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Initializing ProtocolHandler ["http-nio-8999"]
+2020-06-23 22:18:01,322 [main] INFO  [org.apache.catalina.core.StandardService] DirectJDKLog.java:173 - Starting service [Tomcat]
+2020-06-23 22:18:01,323 [main] INFO  [org.apache.catalina.core.StandardEngine] DirectJDKLog.java:173 - Starting Servlet engine: [Apache Tomcat/9.0.17]
+2020-06-23 22:18:01,561 [main] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring embedded WebApplicationContext
+2020-06-23 22:18:01,561 [main] INFO  [org.springframework.web.context.ContextLoader] ServletWebServerApplicationContext.java:296 - Root WebApplicationContext: initialization completed in 2701 ms
+2020-06-23 22:18:02,380 [main] INFO  [org.fisco.bcos.autoconfigure.ServiceConfig] ServiceConfig.java:25 - agencyName : user
+2020-06-23 22:18:02,387 [main] INFO  [org.fisco.bcos.channel.client.Service] Service.java:296 - set jdk.tls.namedGroups opt, value : secp256k1
+2020-06-23 22:18:02,836 [main] INFO  [org.fisco.bcos.channel.handler.ChannelConnections] ChannelConnections.java:450 -  all connections: [ConnectionInfo{host='129.204.20.87', port=20200}]
+2020-06-23 22:18:04,930 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:45 -  handshake success, host: 129.204.20.87, port: 20200, ctx: 1793599371
+2020-06-23 22:18:04,932 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:91 -  connect 129.204.20.87:20200 success, ctx: 1793599371
+2020-06-23 22:18:04,988 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:207 -  query node version host: 129.204.20.87:20200, seq: 2efa85993b504326bd022475fa2eae4f, content: {"jsonrpc":"2.0","method":"getClientVersion","params":[],"id":0}
+2020-06-23 22:18:05,045 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:258 -  node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20200430 03:22:53","Build Type":"Linux/clang/Release","Chain Id":"1","FISCO-BCOS Version":"2.4.0","Git Branch":"HEAD","Git Commit Hash":"0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6","Supported Version":"2.4.0"}}
+
+2020-06-23 22:18:05,046 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:267 -  support channel handshake node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {"id":0,"jsonrpc":"2.0","result":{"Build Time":"20200430 03:22:53","Build Type":"Linux/clang/Release","Chain Id":"1","FISCO-BCOS Version":"2.4.0","Git Branch":"HEAD","Git Commit Hash":"0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6","Supported Version":"2.4.0"}}
+
+2020-06-23 22:18:05,070 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:167 -  channel protocol handshake success, set socket channel protocol, host: 129.204.20.87:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.4.0, EnumProtocol=VERSION_3]
+2020-06-23 22:18:05,073 [main] INFO  [org.fisco.bcos.channel.client.Service] Service.java:373 -  Connect to  nodes: [129.204.20.87:20200] ,groupId: 1 ,caCert: class path resource [ca.crt] ,sslKey: class path resource [sdk.key] ,sslCert: class path resource [sdk.crt] ,java version: 1.8.0_91 ,java vendor: Oracle Corporation
+2020-06-23 22:18:05,081 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:338 -  send update topic message request, seq: fc0a9e34351847c483e0319677ba1f5c, content: ["_block_notify_1"]
+2020-06-23 22:18:05,083 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:370 -  query block number host: 129.204.20.87:20200, seq: dd198f3bba1c46aabb09dd51eb82af76, content: {"jsonrpc":"2.0","method":"getBlockNumber","params":[1],"id":1}
+2020-06-23 22:18:05,100 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:395 -  query blocknumer, host:129.204.20.87:20200, blockNumber: 9 
+2020-06-23 22:18:05,132 [main] INFO  [org.fisco.bcos.autoconfigure.AccountConfig] AccountConfig.java:63 - pem accounts : 0xcdcce60801c0a2e6bb534322c32ae528b9dec8d2.pem
+2020-06-23 22:18:05,516 [main] INFO  [org.fisco.bcos.web3j.utils.Async] Async.java:19 -  default set setExeutor , pool size is 50
+2020-06-23 22:18:05,517 [main] INFO  [org.fisco.bcos.web3j.utils.Async] Async.java:81 -  set setExeutor because executor null, executor is java.util.concurrent.ThreadPoolExecutor@1013871e[Running, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+2020-06-23 22:18:05,985 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":10,"groupID":1}
+
+2020-06-23 22:18:06,598 [main] INFO  [o.s.scheduling.concurrent.ThreadPoolTaskExecutor] ExecutorConfigurationSupport.java:171 - Initializing ExecutorService 'applicationTaskExecutor'
+2020-06-23 22:18:06,811 [main] WARN  [o.s.b.a.g.template.GroovyTemplateAutoConfiguration] GroovyTemplateAutoConfiguration.java:93 - Cannot find template location: classpath:/templates/ (please add some templates, check your Groovy configuration, or set spring.groovy.template.check-template-location=false)
+2020-06-23 22:18:06,979 [main] INFO  [o.s.b.actuate.endpoint.web.EndpointLinksResolver] EndpointLinksResolver.java:59 - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-06-23 22:18:07,021 [main] INFO  [org.apache.coyote.http11.Http11NioProtocol] DirectJDKLog.java:173 - Starting ProtocolHandler ["http-nio-8999"]
+2020-06-23 22:18:07,036 [main] INFO  [o.s.boot.web.embedded.tomcat.TomcatWebServer] TomcatWebServer.java:204 - Tomcat started on port(s): 8999 (http) with context path ''
+2020-06-23 22:18:07,039 [main] INFO  [org.fisco.bcos.Application] StartupInfoLogger.java:59 - Started Application in 9.06 seconds (JVM running for 11.885)
+2020-06-23 22:18:07,895 [RMI TCP Connection(1)-192.168.6.1] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:110 - HikariPool-1 - Starting...
+2020-06-23 22:18:07,897 [RMI TCP Connection(2)-192.168.6.1] INFO  [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] DirectJDKLog.java:173 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-06-23 22:18:07,897 [RMI TCP Connection(2)-192.168.6.1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:524 - Initializing Servlet 'dispatcherServlet'
+2020-06-23 22:18:07,922 [RMI TCP Connection(2)-192.168.6.1] INFO  [org.springframework.web.servlet.DispatcherServlet] FrameworkServlet.java:546 - Completed initialization in 24 ms
+2020-06-23 22:18:08,027 [RMI TCP Connection(1)-192.168.6.1] INFO  [com.zaxxer.hikari.HikariDataSource] HikariDataSource.java:123 - HikariPool-1 - Start completed.
+2020-06-23 22:18:48,852 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":11,"groupID":1}
+
+2020-06-23 22:18:58,437 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":12,"groupID":1}
+
+2020-06-23 22:19:25,147 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":13,"groupID":1}
+
+2020-06-23 22:20:02,428 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":14,"groupID":1}
+
+2020-06-23 22:21:36,640 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":15,"groupID":1}
+
+2020-06-23 22:22:00,369 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":16,"groupID":1}
+
+2020-06-23 22:22:48,702 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":17,"groupID":1}
+
+2020-06-23 22:25:10,164 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":18,"groupID":1}
+
+2020-06-23 22:25:34,882 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":19,"groupID":1}
+
+2020-06-23 22:27:17,456 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":20,"groupID":1}
+
+2020-06-23 22:27:54,176 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":21,"groupID":1}
+
+2020-06-23 22:28:22,921 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":22,"groupID":1}
+
+2020-06-23 22:29:19,757 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":23,"groupID":1}
+
+2020-06-23 22:29:29,318 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":24,"groupID":1}
+
+2020-06-23 22:29:31,048 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":25,"groupID":1}
+
+2020-06-23 22:29:41,739 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":26,"groupID":1}
+
+2020-06-23 22:30:43,211 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":27,"groupID":1}
+
+2020-06-23 22:30:46,910 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":28,"groupID":1}
+
+2020-06-23 22:31:37,761 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":29,"groupID":1}
+
+2020-06-23 22:31:54,612 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":30,"groupID":1}
+
+2020-06-23 22:32:04,224 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":31,"groupID":1}
+
+2020-06-23 22:41:21,640 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":32,"groupID":1}
+
+2020-06-23 22:42:38,687 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":33,"groupID":1}
+
+2020-06-23 22:43:22,551 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":34,"groupID":1}
+
+2020-06-23 22:44:21,958 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":35,"groupID":1}
+
+2020-06-23 22:49:53,121 [nioEventLoopGroup-2-1] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:77 -  ssl close completion event, host: 129.204.20.87, port: 20200, ctx: 1793599371 
+2020-06-23 22:50:18,178 [nioEventLoopGroup-2-2] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:77 -  ssl close completion event, host: 129.204.20.87, port: 20200, ctx: 1961773691 
+2020-06-23 22:50:28,259 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:45 -  handshake success, host: 129.204.20.87, port: 20200, ctx: 1411565729
+2020-06-23 22:50:28,260 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:91 -  connect 129.204.20.87:20200 success, ctx: 1411565729
+2020-06-23 22:50:28,260 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:207 -  query node version host: 129.204.20.87:20200, seq: 937041634cec47a8afea32753b409572, content: {"jsonrpc":"2.0","method":"getClientVersion","params":[],"id":11}
+2020-06-23 22:50:28,330 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:258 -  node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {"id":11,"jsonrpc":"2.0","result":{"Build Time":"20200430 03:22:53","Build Type":"Linux/clang/Release","Chain Id":"1","FISCO-BCOS Version":"2.4.0","Git Branch":"HEAD","Git Commit Hash":"0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6","Supported Version":"2.4.0"}}
+
+2020-06-23 22:50:28,331 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:267 -  support channel handshake node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {"id":11,"jsonrpc":"2.0","result":{"Build Time":"20200430 03:22:53","Build Type":"Linux/clang/Release","Chain Id":"1","FISCO-BCOS Version":"2.4.0","Git Branch":"HEAD","Git Commit Hash":"0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6","Supported Version":"2.4.0"}}
+
+2020-06-23 22:50:28,652 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:167 -  channel protocol handshake success, set socket channel protocol, host: 129.204.20.87:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.4.0, EnumProtocol=VERSION_3]
+2020-06-23 22:50:28,653 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:338 -  send update topic message request, seq: 0933eec791004831bf86c7ae8f169b48, content: ["_block_notify_1"]
+2020-06-23 22:50:28,653 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:370 -  query block number host: 129.204.20.87:20200, seq: 8732f770c5cd48f3968275c772d50f4f, content: {"jsonrpc":"2.0","method":"getBlockNumber","params":[1],"id":12}
+2020-06-23 22:50:29,347 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:395 -  query blocknumer, host:129.204.20.87:20200, blockNumber: 35 
+2020-06-23 22:52:54,405 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":36,"groupID":1}
+
+2020-06-23 22:55:41,371 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":37,"groupID":1}
+
+2020-06-23 22:58:36,170 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":38,"groupID":1}
+
+2020-06-23 23:00:00,671 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":39,"groupID":1}
+
+2020-06-23 23:01:13,794 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":40,"groupID":1}
+
+2020-06-23 23:10:09,173 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":41,"groupID":1}
+
+2020-06-23 23:10:22,800 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":42,"groupID":1}
+
+2020-06-23 23:11:13,005 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":43,"groupID":1}
+
+2020-06-23 23:17:11,487 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":44,"groupID":1}
+
+2020-06-23 23:17:40,373 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":45,"groupID":1}
+
+2020-06-23 23:18:18,243 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":46,"groupID":1}
+
+2020-06-23 23:23:38,601 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":47,"groupID":1}
+
+2020-06-23 23:31:29,027 [nioEventLoopGroup-2-3] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:77 -  ssl close completion event, host: 129.204.20.87, port: 20200, ctx: 1411565729 
+2020-06-23 23:31:45,221 [nioEventLoopGroup-2-4] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:45 -  handshake success, host: 129.204.20.87, port: 20200, ctx: 784643797
+2020-06-23 23:31:45,221 [nioEventLoopGroup-2-4] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:91 -  connect 129.204.20.87:20200 success, ctx: 784643797
+2020-06-23 23:31:45,222 [nioEventLoopGroup-2-4] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:207 -  query node version host: 129.204.20.87:20200, seq: bdfbbfccb8b943f6a8929dad7bcaa193, content: {"jsonrpc":"2.0","method":"getClientVersion","params":[],"id":13}
+2020-06-23 23:31:45,252 [nioEventLoopGroup-2-4] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:258 -  node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {"id":13,"jsonrpc":"2.0","result":{"Build Time":"20200430 03:22:53","Build Type":"Linux/clang/Release","Chain Id":"1","FISCO-BCOS Version":"2.4.0","Git Branch":"HEAD","Git Commit Hash":"0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6","Supported Version":"2.4.0"}}
+
+2020-06-23 23:31:45,254 [nioEventLoopGroup-2-4] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:267 -  support channel handshake node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {"id":13,"jsonrpc":"2.0","result":{"Build Time":"20200430 03:22:53","Build Type":"Linux/clang/Release","Chain Id":"1","FISCO-BCOS Version":"2.4.0","Git Branch":"HEAD","Git Commit Hash":"0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6","Supported Version":"2.4.0"}}
+
+2020-06-23 23:31:45,271 [nioEventLoopGroup-2-4] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:167 -  channel protocol handshake success, set socket channel protocol, host: 129.204.20.87:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.4.0, EnumProtocol=VERSION_3]
+2020-06-23 23:31:45,272 [nioEventLoopGroup-2-4] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:338 -  send update topic message request, seq: a51eea34f6ff4838a40943e95ee23e12, content: ["_block_notify_1"]
+2020-06-23 23:31:45,273 [nioEventLoopGroup-2-4] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:370 -  query block number host: 129.204.20.87:20200, seq: 0fe526fa2a754ff78238e61feb0b0daf, content: {"jsonrpc":"2.0","method":"getBlockNumber","params":[1],"id":14}
+2020-06-23 23:31:45,287 [nioEventLoopGroup-2-4] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:395 -  query blocknumer, host:129.204.20.87:20200, blockNumber: 47 
+2020-06-23 23:32:23,141 [nioEventLoopGroup-2-4] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:77 -  ssl close completion event, host: 129.204.20.87, port: 20200, ctx: 784643797 
+2020-06-23 23:32:32,316 [nioEventLoopGroup-2-5] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:45 -  handshake success, host: 129.204.20.87, port: 20200, ctx: 1064742283
+2020-06-23 23:32:32,317 [nioEventLoopGroup-2-5] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:91 -  connect 129.204.20.87:20200 success, ctx: 1064742283
+2020-06-23 23:32:32,318 [nioEventLoopGroup-2-5] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:207 -  query node version host: 129.204.20.87:20200, seq: d5d7a1ee0c05480e980a484cd38f736e, content: {"jsonrpc":"2.0","method":"getClientVersion","params":[],"id":15}
+2020-06-23 23:32:32,919 [nioEventLoopGroup-2-5] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:258 -  node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {"id":15,"jsonrpc":"2.0","result":{"Build Time":"20200430 03:22:53","Build Type":"Linux/clang/Release","Chain Id":"1","FISCO-BCOS Version":"2.4.0","Git Branch":"HEAD","Git Commit Hash":"0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6","Supported Version":"2.4.0"}}
+
+2020-06-23 23:32:32,919 [nioEventLoopGroup-2-5] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:267 -  support channel handshake node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {"id":15,"jsonrpc":"2.0","result":{"Build Time":"20200430 03:22:53","Build Type":"Linux/clang/Release","Chain Id":"1","FISCO-BCOS Version":"2.4.0","Git Branch":"HEAD","Git Commit Hash":"0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6","Supported Version":"2.4.0"}}
+
+2020-06-23 23:32:34,374 [nioEventLoopGroup-2-5] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:167 -  channel protocol handshake success, set socket channel protocol, host: 129.204.20.87:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.4.0, EnumProtocol=VERSION_3]
+2020-06-23 23:32:34,376 [nioEventLoopGroup-2-5] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:338 -  send update topic message request, seq: 1176e62e56114f1bbfb3eef97c54107f, content: ["_block_notify_1"]
+2020-06-23 23:32:34,377 [nioEventLoopGroup-2-5] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:370 -  query block number host: 129.204.20.87:20200, seq: 899f2077c3b34f9295d88e866ab99607, content: {"jsonrpc":"2.0","method":"getBlockNumber","params":[1],"id":16}
+2020-06-23 23:32:34,996 [nioEventLoopGroup-2-5] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:395 -  query blocknumer, host:129.204.20.87:20200, blockNumber: 47 
+2020-06-23 23:32:57,400 [nioEventLoopGroup-2-5] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:77 -  ssl close completion event, host: 129.204.20.87, port: 20200, ctx: 1064742283 
+2020-06-23 23:33:14,767 [nioEventLoopGroup-2-6] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:45 -  handshake success, host: 129.204.20.87, port: 20200, ctx: 1504920749
+2020-06-23 23:33:14,768 [nioEventLoopGroup-2-6] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:91 -  connect 129.204.20.87:20200 success, ctx: 1504920749
+2020-06-23 23:33:14,769 [nioEventLoopGroup-2-6] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:207 -  query node version host: 129.204.20.87:20200, seq: 1625cc47b69448b0876ae8bf0db47eba, content: {"jsonrpc":"2.0","method":"getClientVersion","params":[],"id":17}
+2020-06-23 23:33:15,269 [nioEventLoopGroup-2-6] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:258 -  node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {"id":17,"jsonrpc":"2.0","result":{"Build Time":"20200430 03:22:53","Build Type":"Linux/clang/Release","Chain Id":"1","FISCO-BCOS Version":"2.4.0","Git Branch":"HEAD","Git Commit Hash":"0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6","Supported Version":"2.4.0"}}
+
+2020-06-23 23:33:15,269 [nioEventLoopGroup-2-6] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:267 -  support channel handshake node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {"id":17,"jsonrpc":"2.0","result":{"Build Time":"20200430 03:22:53","Build Type":"Linux/clang/Release","Chain Id":"1","FISCO-BCOS Version":"2.4.0","Git Branch":"HEAD","Git Commit Hash":"0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6","Supported Version":"2.4.0"}}
+
+2020-06-23 23:33:15,291 [nioEventLoopGroup-2-6] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:167 -  channel protocol handshake success, set socket channel protocol, host: 129.204.20.87:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.4.0, EnumProtocol=VERSION_3]
+2020-06-23 23:33:15,292 [nioEventLoopGroup-2-6] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:338 -  send update topic message request, seq: b82a09096fa9424584203e33bd295be6, content: ["_block_notify_1"]
+2020-06-23 23:33:15,292 [nioEventLoopGroup-2-6] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:370 -  query block number host: 129.204.20.87:20200, seq: 87ad130be7fd4b73811510176b990266, content: {"jsonrpc":"2.0","method":"getBlockNumber","params":[1],"id":18}
+2020-06-23 23:33:15,305 [nioEventLoopGroup-2-6] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:395 -  query blocknumer, host:129.204.20.87:20200, blockNumber: 47 
+2020-06-23 23:44:19,816 [nioEventLoopGroup-2-6] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":48,"groupID":1}
+
+2020-06-23 23:46:32,273 [nioEventLoopGroup-2-6] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:77 -  ssl close completion event, host: 129.204.20.87, port: 20200, ctx: 1504920749 
+2020-06-23 23:46:45,147 [nioEventLoopGroup-2-7] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:45 -  handshake success, host: 129.204.20.87, port: 20200, ctx: 92113310
+2020-06-23 23:46:45,147 [nioEventLoopGroup-2-7] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:91 -  connect 129.204.20.87:20200 success, ctx: 92113310
+2020-06-23 23:46:45,148 [nioEventLoopGroup-2-7] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:207 -  query node version host: 129.204.20.87:20200, seq: 079733d15cfe4adea063c84700291ecb, content: {"jsonrpc":"2.0","method":"getClientVersion","params":[],"id":19}
+2020-06-23 23:46:45,163 [nioEventLoopGroup-2-7] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:258 -  node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {"id":19,"jsonrpc":"2.0","result":{"Build Time":"20200430 03:22:53","Build Type":"Linux/clang/Release","Chain Id":"1","FISCO-BCOS Version":"2.4.0","Git Branch":"HEAD","Git Commit Hash":"0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6","Supported Version":"2.4.0"}}
+
+2020-06-23 23:46:45,164 [nioEventLoopGroup-2-7] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:267 -  support channel handshake node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {"id":19,"jsonrpc":"2.0","result":{"Build Time":"20200430 03:22:53","Build Type":"Linux/clang/Release","Chain Id":"1","FISCO-BCOS Version":"2.4.0","Git Branch":"HEAD","Git Commit Hash":"0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6","Supported Version":"2.4.0"}}
+
+2020-06-23 23:46:45,180 [nioEventLoopGroup-2-7] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:167 -  channel protocol handshake success, set socket channel protocol, host: 129.204.20.87:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.4.0, EnumProtocol=VERSION_3]
+2020-06-23 23:46:45,181 [nioEventLoopGroup-2-7] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:338 -  send update topic message request, seq: 352e59cbfb974e1ebd9add356cd014b0, content: ["_block_notify_1"]
+2020-06-23 23:46:45,181 [nioEventLoopGroup-2-7] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:370 -  query block number host: 129.204.20.87:20200, seq: 4a0e27ce24c5468ba96f87e4d4f857f5, content: {"jsonrpc":"2.0","method":"getBlockNumber","params":[1],"id":20}
+2020-06-23 23:46:45,195 [nioEventLoopGroup-2-7] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:395 -  query blocknumer, host:129.204.20.87:20200, blockNumber: 48 
+2020-06-23 23:48:24,137 [nioEventLoopGroup-2-7] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":49,"groupID":1}
+
+2020-06-23 23:53:50,304 [nioEventLoopGroup-2-7] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":50,"groupID":1}
+
+2020-06-23 23:55:53,095 [nioEventLoopGroup-2-7] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:77 -  ssl close completion event, host: 129.204.20.87, port: 20200, ctx: 92113310 
+2020-06-23 23:56:05,238 [nioEventLoopGroup-2-8] INFO  [org.fisco.bcos.channel.handler.ChannelHandler] ChannelHandler.java:45 -  handshake success, host: 129.204.20.87, port: 20200, ctx: 1600672266
+2020-06-23 23:56:05,239 [nioEventLoopGroup-2-8] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:91 -  connect 129.204.20.87:20200 success, ctx: 1600672266
+2020-06-23 23:56:05,240 [nioEventLoopGroup-2-8] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:207 -  query node version host: 129.204.20.87:20200, seq: 28f8cb8eb77944859bbcab697d0f02d9, content: {"jsonrpc":"2.0","method":"getClientVersion","params":[],"id":24}
+2020-06-23 23:56:05,257 [nioEventLoopGroup-2-8] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:258 -  node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {"id":24,"jsonrpc":"2.0","result":{"Build Time":"20200430 03:22:53","Build Type":"Linux/clang/Release","Chain Id":"1","FISCO-BCOS Version":"2.4.0","Git Branch":"HEAD","Git Commit Hash":"0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6","Supported Version":"2.4.0"}}
+
+2020-06-23 23:56:05,258 [nioEventLoopGroup-2-8] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:267 -  support channel handshake node: Version [buildTime=20200430 03:22:53, buildType=Linux/clang/Release, chainID=1, version=2.4.0, gitBranch=HEAD, gitCommit=0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6, supportedVersion=2.4.0], content: {"id":24,"jsonrpc":"2.0","result":{"Build Time":"20200430 03:22:53","Build Type":"Linux/clang/Release","Chain Id":"1","FISCO-BCOS Version":"2.4.0","Git Branch":"HEAD","Git Commit Hash":"0d94de1e0f2dc7ce7d226dbd68001a4b43029cf6","Supported Version":"2.4.0"}}
+
+2020-06-23 23:56:05,276 [nioEventLoopGroup-2-8] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:167 -  channel protocol handshake success, set socket channel protocol, host: 129.204.20.87:20200, channel protocol: ChannelProtocol [protocol=3, nodeVersion=2.4.0, EnumProtocol=VERSION_3]
+2020-06-23 23:56:05,277 [nioEventLoopGroup-2-8] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:338 -  send update topic message request, seq: 6602ae5ead514d60885b02c9e6d5b5b1, content: ["_block_notify_1"]
+2020-06-23 23:56:05,278 [nioEventLoopGroup-2-8] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:370 -  query block number host: 129.204.20.87:20200, seq: 00749cf8755548779c9c67c546e8509e, content: {"jsonrpc":"2.0","method":"getBlockNumber","params":[1],"id":25}
+2020-06-23 23:56:05,293 [nioEventLoopGroup-2-8] INFO  [org.fisco.bcos.channel.handler.ConnectionCallback] ConnectionCallback.java:395 -  query blocknumer, host:129.204.20.87:20200, blockNumber: 50 
+2020-06-23 23:56:26,426 [nioEventLoopGroup-2-8] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":51,"groupID":1}
+
+2020-06-23 23:57:11,203 [nioEventLoopGroup-2-8] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":52,"groupID":1}
+
+2020-06-23 23:58:23,445 [nioEventLoopGroup-2-8] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":53,"groupID":1}
+
+2020-06-23 23:58:35,192 [nioEventLoopGroup-2-8] INFO  [org.fisco.bcos.channel.client.Service] Service.java:1388 - Receive block notify: {"blockNumber":54,"groupID":1}
+

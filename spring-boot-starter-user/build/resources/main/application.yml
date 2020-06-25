@@ -9,7 +9,7 @@ group-channel-connections-config:
     - group-id: 1 #group ID
       connections-str:
         - 129.204.20.87:20200 # node listen_ip:channel_listen_port
-        - 129.204.20.87:20201
+
     - group-id: 2
       connections-str:
         - 129.204.20.87:20202 # node listen_ip:channel_listen_port
@@ -17,7 +17,7 @@ group-channel-connections-config:
 
 channel-service:
   group-id: 1 # The specified group to which the SDK connects
-  agency-name: fisco # agency name
+  agency-name: user # agency name
 
 accounts:
   pem-file: 0xcdcce60801c0a2e6bb534322c32ae528b9dec8d2.pem
@@ -30,7 +30,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/score_market?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
     username: root
-    password: qq208931
+    password: tlokihyrpQZR5
 
   jackson:
     time-zone: GMT+8
@@ -38,3 +38,12 @@ mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: org.fisco.bcos.model
 
+qiniu:
+  AccessKey: UyJKYN3h_GO86-Ldl3i1VYGDsnWBeRQILbxXvI_r
+  SecretKey: KBoIe6nEdFyPO_rcqopW0aNPoggHYPBfDThpxISS
+  Bucket: item-picture
+  cdn:
+    prefix: http://sofupic.dormassistant.com
+
+server:
+  port: 8999

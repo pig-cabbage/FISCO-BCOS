@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 
 @Service
-public class TransferScoreService {
+public class transferScoreService {
 
 
     @Autowired
@@ -21,7 +21,7 @@ public class TransferScoreService {
 
 
     public Boolean transferScore(Integer sendId, Integer getId, Integer score) throws Exception{
-        //Çø¿éÁ´²Ù×÷
+        //åŒºå—é“¾æ“ä½œ
         System.out.println("HelloWorld address is: " + helloWorld.getContractAddress());
         // call set function
         helloWorld.set("Hello, World!").send();

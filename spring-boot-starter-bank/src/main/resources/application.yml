@@ -8,8 +8,8 @@ group-channel-connections-config:
   all-channel-connections:
     - group-id: 1 #group ID
       connections-str:
-        - 129.204.20.87:20202 # node listen_ip:channel_listen_port
-
+        - 129.204.20.87:20204 # node listen_ip:channel_listen_port
+        - 129.204.20.87:20205
     - group-id: 2
       connections-str:
         - 129.204.20.87:20202 # node listen_ip:channel_listen_port
@@ -17,7 +17,7 @@ group-channel-connections-config:
 
 channel-service:
   group-id: 1 # The specified group to which the SDK connects
-  agency-name: fisco # agency name
+  agency-name: bank # agency name
 
 accounts:
   pem-file: 0x7b52ba0c6f7ec03dec45d60721853ee38775da6e.pem
@@ -28,9 +28,9 @@ accounts:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/score_market?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://129.204.20.87:3306/score_market?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC&useSSL=false&allowPublicKeyRetrieval=true
     username: root
-    password: tlokihyrpQZR5
+    password: lxpkLXPK8953807@
 
   jackson:
     time-zone: GMT+8

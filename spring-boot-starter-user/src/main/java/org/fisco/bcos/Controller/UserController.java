@@ -1,68 +1,81 @@
 package org.fisco.bcos.Controller;
 
-import org.fisco.bcos.Service.UserService;
-import org.fisco.bcos.model.UserInformation;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
 
+import org.fisco.bcos.Service.userService;
+import org.fisco.bcos.constants.GasConstants;
+import org.fisco.bcos.contract.Asset;
+import org.fisco.bcos.model.UserInformation;
+import org.fisco.bcos.web3j.protocol.core.methods.response.TransactionReceipt;
+import org.fisco.bcos.web3j.tx.gas.StaticGasProvider;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
 public class UserController {
     @Autowired
-    UserService userService;
+    private userService userService;
+    @Autowired
+    private Asset asset;
 
-    @RequestMapping("getUserById")
-    public Map<String,Object> getUserById(@RequestParam int userId){
-        UserInformation userInformation = userService.getUserInformationById(userId);
-        Map<String,Object> res=new HashMap<>();
-        if (userInformation==null){
-            res.put("查询错误","该ID不存在");
+    @RequestMapping(value = "/api/login",method = RequestMethod.GET)
+    public Map<String,Object> getUserById(@RequestParam("account") String account,@RequestParam("password") String password) throws Exception {
+
+            UserInformation userInformation = userService.getUserInformationById(Integer.parseInt(account));
+            Map<String, Object> res = new HashMap<>();
+            if (userInformation == null) {
+                res.put("response", "账号不存在");
+
+            } else {
+                if(userInformation.getUserSecret().equals(password)==true) {
+                    //调用合约获取用户积分
+                    TransactionReceipt send=asset.searchUserScore(BigInteger.valueOf(Integer.parseInt(account))).send();
+                    BigInteger temp=asset.getSearchUserScoreOutput(send).getValue1();
+                    res.put("userinformation",userInformation);
+                    res.put("score",temp.intValue());
+
+                }else
+                    res.put("response","密码错误");
+            }
             return res;
-        }
-        else {
-            res.put("UserId",userInformation.getUserId());
-            res.put("UserAccount",userInformation.getUserAccount());
-            res.put("UserName",userInformation.getUserName());
-            res.put("UserSecret",userInformation.getUserSecret());
-            res.put("Surplus",userInformation.getSurplus());
-            return res;
-        }
+
     }
 
-    @RequestMapping("insertUserInformation")
-    public String insertUserInformation( @RequestParam int surplus,@RequestParam String userAccount,
-                                        @RequestParam String userName,@RequestParam String userSecret){
+    @RequestMapping(value="/api/register",method = RequestMethod.GET)
+    public Map<String,Object> insertUserInformation( @RequestParam String userAccount, @RequestParam String password) throws Exception {
+        Map<String,Object>res=new HashMap<>();
         UserInformation userInformation=new UserInformation();
-        userInformation.setSurplus(surplus);
+        userInformation.setUserId(Integer.parseInt(userAccount));
+
         userInformation.setUserAccount(userAccount);
-        userInformation.setUserName(userName);
-        userInformation.setUserSecret(userSecret);
-        if(userService.insertUserInformation(userInformation)>0)
-            return "插入成功";
+
+        userInformation.setUserSecret(password);
+        if(userService.insertUserInformation(userInformation)>0) {
+            //调用合约接口
+            TransactionReceipt send = asset.userRegister(BigInteger.valueOf(Integer.parseInt(userAccount))).send();
+            BigInteger temp = asset.getUserRegisterOutput(send).getValue1();
+            if(temp.intValue()==1) {
+                res.put("response", "success");
+            }else{
+                res.put("response","合约注册失败");
+            }
+        }
         else
-            return "插入失败";
+            res.put("response","fail");
+        return res;
 
     }
-    @RequestMapping("updateUserInformation")
-    public String updateUserInformation(@RequestParam int userId , @RequestParam int surplus,@RequestParam String userAccount,
-                                        @RequestParam String userName,@RequestParam String userSecret){
-        UserInformation userInformation=new UserInformation();
-        userInformation.setUserId(userId);
-        userInformation.setSurplus(surplus);
-        userInformation.setUserAccount(userAccount);
-        userInformation.setUserName(userName);
-        userInformation.setUserSecret(userSecret);
-        if(userService.getUserInformationById(userId)==null)
-            return "ID不存在，更新失败";
-        else{
-            if(userService.updateUserInformation(userInformation)>0)
-                return "更新成功";
+    @RequestMapping(value="/api/update",method = RequestMethod.POST)
+    public Map<String,Object> updateUserInformation(UserInformation user){
+        Map<String,Object>res=new HashMap<>();
+            if(userService.updateUserInformation(user)>0)
+                res.put("resonse","success");
             else
-                return "更新失败";
-        }
+                res.put("response","fail");
+            return res;
+
     }
 }

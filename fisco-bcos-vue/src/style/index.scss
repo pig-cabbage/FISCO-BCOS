@@ -1,0 +1,138 @@
+@import './variable.scss';
+@import './layout.scss';
+@import './transition.scss';
+
+html {
+  height: 100%;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  color: #606266;
+  &:hover {
+    text-decoration: none;
+    color: #409eff;
+  }
+}
+body {
+  height: 100%;
+  font: 12px/1.5 Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB,
+    Microsoft YaHei, SimSun, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  height: 100%;
+}
+.mtop30 {
+  margin-top: $px30;
+}
+.fontBold {
+  font-weight: bold;
+}
+.mtrt20 {
+  margin-right: $px20;
+}
+.wid300 {
+  width: 300px !important;
+}
+.btnStyle1 {
+  padding: 11px 20px !important;
+}
+.header i[class^='el-icon'] {
+  color: $text-color;
+}
+#app .clearFixed:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.loginCon .el-input__inner {
+  // background: rgba(0, 0, 0, 0.1);
+  background: #fff;
+  height: 50px;
+  outline: none;
+  color: $text-color;
+  border: none;
+}
+.loginCon .el-form-item {
+  // border: 1px solid hsla(0, 0%, 100%, 0.1);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.marginLeft {
+  margin-left: 64px !important;
+}
+.pTitle {
+  font-size: 14px;
+  color: #666;
+  padding: 10px 0;
+  code {
+    background-color: #f9fafc;
+    padding: 0 4px;
+    border: 1px solid #eaeefb;
+    border-radius: 4px;
+  }
+  span {
+    font-size: 12px;
+  }
+  i {
+    margin-right: 5px;
+    color: #ffc107;
+    font-size: 18px;
+  }
+}
+.el-notification {
+  .el-icon-s-opportunity {
+    color: #ffc107;
+    font-size: 22px;
+    margin-top: 2px;
+  }
+}
